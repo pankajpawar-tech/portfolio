@@ -4,127 +4,8 @@
   <meta charset="UTF-8" />
   <title>Pankaj Pawar | Portfolio</title>
 
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
-    }
-
-    body {
-      color: #fff;
-    }
-
-    /* NAVBAR */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(35, 40, 50, 0.85);
-      padding: 15px 40px;
-      z-index: 999;
-    }
-
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav ul li {
-      font-size: 15px;
-      cursor: pointer;
-      color: #cfcfcf;
-    }
-
-    nav ul li.active,
-    nav ul li:hover {
-      color: #ff6b2c;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      height: 100vh;
-      background:
-        linear-gradient(
-          rgba(25, 30, 40, 0.7),
-          rgba(25, 30, 40, 0.7)
-        ),
-        url("assets/images/hero-bg.jpeg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero-content h1 {
-      font-size: 48px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .hero-content h2 {
-      font-size: 34px;
-      font-weight: 400;
-      margin-bottom: 25px;
-    }
-
-    .hero-content p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #d4d4d4;
-      margin-bottom: 40px;
-    }
-
-    /* BUTTON */
-    .cta-btn {
-      background: #ff6b2c;
-      color: #fff;
-      padding: 14px 30px;
-      border-radius: 25px;
-      font-size: 14px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .cta-btn:hover {
-      background: #e85a1f;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero-content h1 {
-        font-size: 36px;
-      }
-      .hero-content h2 {
-        font-size: 26px;
-      }
-      nav ul {
-        display: none; /* simple mobile handling for now */
-      }
-    }
-  </style>
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -134,16 +15,85 @@
     <div class="nav-container">
       <div class="logo">Pankaj Pawar</div>
       <nav>
-        <ul>
-          <li class="active">Home</li>
-          <li>About</li>
-          <li>Tools ▼</li>
-          <li>AI ▼</li>
-          <li>Microsoft ▼</li>
-          <li>Power Platform ▼</li>
-          <li>Blog</li>
-          <li>Hobbies ▼</li>
-          <li>Contact</li>
+        <ul class="nav-menu">
+
+          <li><a class="active" href="#">Home</a></li>
+
+          <!-- About with dropdown -->
+          <li class="has-dropdown">
+            <a href="#">
+              About <span class="caret">▼</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Volunteering</a></li>
+              <li><a href="#">Star Adoption</a></li>
+              <li><a href="#">PowerTechSpeck</a></li>
+              <li><a href="#">Achievements</a></li>
+              <li><a href="#">Credentials</a></li>
+              <li><a href="#">MBTI</a></li>
+              <li><a href="#">Clifton Strengths</a></li>
+              <li><a href="#">Global Profile</a></li>
+              <li><a href="#">Charities</a></li>
+              <li><a href="#">Repos and Gists</a></li>
+            </ul>
+          </li>
+
+          <!-- Tools with dropdown -->
+          <li class="has-dropdown">
+            <a href="#">Tools <span class="caret">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">SPFx</a></li>
+              <li><a href="#">Power Automate</a></li>
+              <li><a href="#">Power Apps</a></li>
+              <li><a href="#">Power BI</a></li>
+            </ul>
+          </li>
+
+          <!-- AI with dropdown -->
+          <li class="has-dropdown">
+            <a href="#">AI <span class="caret">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Copilot Agents</a></li>
+              <li><a href="#">Prompt Library</a></li>
+              <li><a href="#">RAG Notes</a></li>
+            </ul>
+          </li>
+
+          <!-- Microsoft with dropdown -->
+          <li class="has-dropdown">
+            <a href="#">Microsoft <span class="caret">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Microsoft 365</a></li>
+              <li><a href="#">SharePoint Online</a></li>
+              <li><a href="#">Graph API</a></li>
+            </ul>
+          </li>
+
+          <!-- Power Platform with dropdown -->
+          <li class="has-dropdown">
+            <a href="#">Power Platform <span class="caret">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">ALM & DevOps</a></li>
+              <li><a href="#">CoE Setup</a></li>
+              <li><a href="#">Governance</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Blog</a></li>
+
+          <!-- Hobbies with dropdown -->
+          <li class="has-dropdown">
+            <a href="#">Hobbies <span class="caret">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Reading</a></li>
+              <li><a href="#">Music</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Contact</a></li>
+
         </ul>
       </nav>
     </div>
@@ -165,6 +115,7 @@
         class="cta-btn"
         href="https://www.linkedin.com/in/pankaj-pawar-1935138a/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         LinkedIn Profile →
       </a>
