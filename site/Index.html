@@ -1,56 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Pankaj Pawar | Portfolio</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(35, 40, 50, 0.85);
+      padding: 15px 40px;
+      z-index: 999;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      font-size: 15px;
+      cursor: pointer;
+      color: #cfcfcf;
+    }
+
+    nav ul li.active,
+    nav ul li:hover {
+      color: #ff6b2c;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background:
+        linear-gradient(
+          rgba(25, 30, 40, 0.7),
+          rgba(25, 30, 40, 0.7)
+        ),
+        url("assets/images/hero-bg.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-content h2 {
+      font-size: 34px;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #d4d4d4;
+      margin-bottom: 40px;
+    }
+
+    /* BUTTON */
+    .cta-btn {
+      background: #ff6b2c;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 25px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #e85a1f;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 36px;
+      }
+      .hero-content h2 {
+        font-size: 26px;
+      }
+      nav ul {
+        display: none; /* simple mobile handling for now */
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <h1>Pankaj Pawar</h1>
-  <p><strong>Delivery Architect | Microsoft 365 | Power Platform | Copilot</strong></p>
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Pankaj Pawar</div>
+      <nav>
+        <ul>
+          <li class="active">Home</li>
+          <li>About</li>
+          <li>Tools ▼</li>
+          <li>AI ▼</li>
+          <li>Microsoft ▼</li>
+          <li>Power Platform ▼</li>
+          <li>Blog</li>
+          <li>Hobbies ▼</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Optional profile image -->
-  <!-- <img src="assets/images/profile.jpg" alt="t -->
-  <h2>About Me</h2>
-  <p>
-    Delivery Architect with experience designing and delivering
-    enterprise solutions using Microsoft 365, SharePoint Online,
-    Power Platform, and Microsoft Copilot.
-  </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Pankaj Pawar</h1>
+      <h2>Power Platform Evangelist</h2>
 
-  <!-- Skills -->
-  <h2>Core Expertise</h2>
-  <ul>
-    <li>SharePoint Online & SPFx</li>
-    <li>Power Apps, Power Automate, Power BI</li>
-    <li>Power Platform ALM & DevOps</li>
-    <li>Microsoft Copilot & Integrations</li>
-    <li>Microsoft Azure Foundry</li>
-  </ul>
+      <p>
+        Delivery Architect with experience in designing, developing,
+        implementing, and managing enterprise collaboration platform solutions
+        using Power Platform, Microsoft 365, Dynamics 365, and Microsoft Azure.
+      </p>
 
-  <!-- Projects -->
-  <h2>Featured Projects</h2>
-  <ul>
-    <li>
-      <strong>BHOS Application Migration</strong><br>
-      Migrated a legacy SharePoint 2010 application to SharePoint Online
-      with Power Platform automation.
-    </li>
-  </ul>
-
-  <!-- Certifications -->
-  <h2>Certifications</h2>
-  <p>Microsoft Certified | Power Platform | Azure Fundamentals</p>
-
-  <!-- Contact -->
-  <h2>Contact</h2>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/pankaj-pawar-1935138a/" target="_blank">
-      https://www.linkedin.com/in/pankaj-pawar-1935138a/
-    </a>
-  </p>
+      <a
+        class="cta-btn"
+        href="https://www.linkedin.com/in/pankaj-pawar-1935138a/"
+        target="_blank"
+      >
+        LinkedIn Profile →
+      </a>
+    </div>
+  </section>
 
 </body>
 </html>
